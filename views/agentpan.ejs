@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Information</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+    }
+
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    :root {
+      --main-color-1: #C18FFF;
+      --main-color-2: #FFF2CF;
+    }
+
+    #foo {
+      color: var(--main-color-1);
+      color: var(--main-color-2);
+    }
+
+    .header {
+      background-image: linear-gradient(to right, var(--main-color-1), var(--main-color-2));
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 0;
+      position: sticky;
+      top: 0;
+      width: 100%;
+      z-index: 100;
+      box-shadow: 0px 4px 20px 0px rgb(20 20 20);
+
+    }
+
+    .left {
+      margin-left: 15px;
+      font-size: 25px;
+      color: white;
+    }
+
+    .right {
+      margin-left: 20%;
+    }
+
+
+    .right nav ul {
+      display: flex;
+      margin-right: 5px;
+
+    }
+
+    .right nav ul li a {
+      text-decoration: none;
+      color: black;
+    }
+
+
+
+    .right nav ul li {
+      list-style: none;
+      padding: 2px;
+      margin: 0 25px;
+
+    }
+
+
+    .filter-container {
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      overflow: hidden;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      margin-bottom: 20px;
+      width: 800px;
+      margin: 30px auto;
+    }
+
+    .filter-checkbox {
+      margin-bottom: 10px;
+    }
+
+    .apply-button {
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1em;
+      cursor: pointer;
+    }
+
+    .apply-button:hover {
+      background-color: #0056b3;
+    }
+
+    .container {
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      padding: 20px;
+      width: 800px;
+      margin: 40px auto;
+      justify-content: space-evenly;
+    }
+
+    .full-name,
+    .company-name,
+    .company-url {
+      font-size: 1.2em;
+      margin-right: 20px;
+    }
+
+    .company-url {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    .chat-button {
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1em;
+      cursor: pointer;
+    }
+
+    .chat-button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="left">
+        CodePatra
+    </div>
+    <div class="right">
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/login">LogIn</a></li>
+                <li><a href="/orgadmin">Admin</a></li>
+                <li>Contact Us</li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<div style="margin: 100px;">
+  <a  href="/user_<%= loginUser._id %>.pdf" download="user_<%= loginUser._id %>.pdf">
+      <button>Membership certificate</button>
+  </a>
+</div>
+
+  <div class="filter-container">
+    <label class="filter-checkbox">
+      <input type="checkbox" id="inbound"> Inbound Tour Operator
+    </label>
+    <label class="filter-checkbox">
+      <input type="checkbox" id="outbound"> Outbound Tour Operator
+    </label>
+    <label class="filter-checkbox">
+      <input type="checkbox" id="domestic"> Domestic
+    </label>
+    <label class="filter-checkbox">
+      <input type="checkbox" id="mice"> MICE
+    </label>
+    <label class="filter-checkbox">
+      <input type="checkbox" id="int-dmc"> International DMC
+    </label>
+    <label class="filter-checkbox">
+      <input type="checkbox" id="dom-dmc"> Domestic DMC
+    </label>
+    <label class="filter-checkbox">
+      <input type="checkbox" id="int-air-ticketing"> International AIR Ticketing
+    </label>
+    <label class="filter-checkbox">
+      <input type="checkbox" id="dom-air-ticketing"> Domestic AIR Ticketing
+    </label>
+    <button class="apply-button" onclick="applyFilters()">Apply Filters</button>
+  </div>
+  <div class="pannel-data">
+  <% p.forEach(item => { %>
+  <div class="container">
+    <div class="full-name">
+      <%= item.name %>
+    </div>
+    <div class="company-name">
+      <%= item.companyname %>
+    </div>
+    <a href=<%=item.companywebsite %> class="company-url" target="_blank"><%= item.companywebsite %></a>
+    <button class="chat-button">Start Chat</button>
+  </div>
+  <% }); %>
+  </div>
+
+
+
+  <script>
+    function applyFilters() {
+    
+      console.log('button is clicked')
+      let filters = {
+        inbound: document.getElementById("inbound").checked,
+        outbound: document.getElementById("outbound").checked,
+        domestic: document.getElementById("domestic").checked,
+        MICE: document.getElementById("mice").checked,
+        intDMC: document.getElementById("int-dmc").checked,
+        domDMC: document.getElementById("dom-dmc").checked,
+        intAirTicketing: document.getElementById("int-air-ticketing").checked,
+        domAirTicketing: document.getElementById("dom-air-ticketing").checked
+      }
+      
+      fetch('http://localhost:3000/filterpannel', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(filters),
+      })
+        .then(response => response.text())
+        .then(data => {
+          document.querySelector('.pannel-data').innerHTML = data;
+        })
+        .catch(error => console.error('Error:', error));
+
+    }
+
+  </script>
+
+</body>
+
+</html>

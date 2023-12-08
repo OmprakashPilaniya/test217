@@ -1,0 +1,8 @@
+<% filteredData.forEach(item => { %>
+   <div class="container">
+        <div class="full-name"><%= item.name %></div>
+        <div class="company-name"><%= item.companyname %></div>
+        <a href=<%= item.companywebsite %> class="company-url" target="_blank"><%= item.companywebsite %></a>
+        <button class="chat-button">Start Chat</button>
+    </div>
+    <% }); %>

@@ -1,0 +1,228 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+:root {
+    --main-color-1:#C18FFF;
+    --main-color-2:#FFF2CF;
+}
+
+  #foo {
+    color: var(--main-color-1);
+    color: var(--main-color-2);
+}
+
+.header{
+    background-image: linear-gradient(to right,var(--main-color-1) , var(--main-color-2));
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    position:sticky;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    box-shadow: 0px 4px 20px 0px rgb(20 20 20);   
+  
+  }
+  
+  .left{
+    margin-left: 15px;
+    font-size: 25px;
+    color: white;
+  }
+  
+  .right{
+  margin-left: 20%;
+  }
+  
+  
+  .right nav ul{
+    display: flex;
+    margin-right: 5px;
+    
+  }
+  
+  .right nav ul li a{
+    text-decoration: none;
+    color: black;
+  }
+  
+  
+  
+  .right nav ul li{
+    list-style: none;
+    padding: 2px;
+    margin: 0 25px;
+    
+  }
+  
+  .img1{
+    position: relative;
+  }
+  
+  .img1 img{
+  width: 100%;
+  filter: brightness(0.4);
+    
+  }
+  
+  .img1-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    transform: translate(-50%,-50%);
+  }
+  
+  .img1-text1{
+    font-size: 3.5vw;
+    font-weight:1000;
+    color: white;
+    text-align: center;
+    width: 60%;
+    margin: auto;
+   
+    
+  }
+  .img1-text2{
+    font-size: 22px;
+    color: rgb(215, 215, 215);
+    margin: 5px 0;
+    text-align: center;
+  }
+
+.form-container{
+    width: 900px;
+    margin: auto;
+    background-image: linear-gradient(to right,var(--main-color-1) , var(--main-color-2));
+    padding: 50px 70px;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgb(119 119 119);
+}
+
+.section1{
+    margin-top: 0px;
+}
+
+.flex1,.flex2,.flex3{
+    display: flex;
+   justify-content:space-between;
+
+}
+
+
+input{
+    font-size: 18px;
+    display: block;
+    margin: 15px auto;
+    width: 350px;
+    padding: 20px 20px;
+    border-radius: 3px;
+    border-style: none;
+    box-shadow: 0 3px 5px rgb(127 122 122);
+}
+#exp1,#exp2,#exp3{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    position: relative;
+    transform: translate(0, 25%);
+    box-shadow: none;
+    margin-right: 10px;
+}
+input[type="radio"] {
+width: auto;
+}
+
+label[for="gender"],label[for="interest"],label[for="feedback"]{
+    display: block;
+}
+#submit-button{
+    text-align: center;
+    margin:30px  auto;
+    font-size: 22px;
+    border-radius: 5px;
+    background-image: linear-gradient(to right,var(--main-color-1) , var(--main-color-2));
+    cursor: pointer;
+}
+select{
+    width: 390px;
+    padding: 20px 20px;
+    font-size: 18px;
+    color: rgb(52, 52, 52);
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 3px 5px rgb(127 122 122);
+    margin: 10px 0;
+}
+.gender-label{
+    font-size: 18px;
+    margin-right: 50px;
+}
+
+.existing-login{
+    text-align: center;
+    margin: auto;
+}
+
+#logIn-Button{
+    text-align: center;
+    margin:30px  auto;
+    font-size: 22px;
+    background-image: linear-gradient(to right,var(--main-color-1) , var(--main-color-2));
+    font-size: 18px;
+    display: block;
+    width: 350px;
+    padding: 20px 20px;
+    border-radius: 3px;
+    border-style: none;
+    box-shadow: 0 3px 5px rgb(127 122 122);
+    cursor: pointer;
+}
+.login-form{
+    width: 800px;
+    margin:60px auto;
+    text-align: center;
+    display: none;
+}
+.login-containt{
+    width: 450px;
+    margin: auto;
+    text-align: center;
+    padding: 5px;
+    background-image: linear-gradient(to right,var(--main-color-1) , var(--main-color-2));
+    box-shadow: 0 4px 10px rgb(119 119 119);
+    margin-bottom: 30px;
+}
+
+.login-containt input{
+    font-size: 14px;
+    display: block;
+    margin: 55px auto;
+    width: 250px;
+    padding: 20px 20px;
+    border-radius: 3px;
+}
+
+#login-submit{
+    font-size: 14px;
+    display: block;
+    margin: 15px auto;
+    width: 250px;
+    padding: 20px 20px;
+    border-radius: 3px;
+    background-image: linear-gradient(to right,var(--main-color-1) , var(--main-color-2));
+    cursor: pointer;
+}
+#signup-button{
+    font-size: 14px;
+    display: block;
+    margin: 15px auto;
+    width: 250px;
+    padding: 20px 20px;
+    border-radius: 3px;
+    background-image: linear-gradient(to right,var(--main-color-1) , var(--main-color-2));
+    cursor: pointer;
+}
+

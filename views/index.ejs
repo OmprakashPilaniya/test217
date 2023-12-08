@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account or LogIn</title>
+</head>
+
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>We Care About Your Career</title>
+        <link rel="stylesheet" href="style.css">
+
+        <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    </head>
+
+    <body style="font-family:'Poppins';">
+        <header class="header">
+            <div class="left">
+                CodePatra
+            </div>
+            <div class="right">
+                <nav>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/login">LogIn</a></li>
+                        <li><a href="/orgadmin">Admin</a></li>
+                        <li>Contact Us</li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <section class="section1">
+
+            <div class="img1">
+                <img src="main.jpg" alt="">
+
+                <div class="img1-text">
+                    <div class="img1-text1">Welcome to IATTE</div>
+                    <div class="img1-text2">An online platform which brings the organized & non- organized agents, the
+                        biggest to the smallest agents from the trade – together. We are promoting responsible &
+                        sustainable tourism & we want to bring India closer to the world. Our objective is to empower,
+                        connect & sustain.</div>
+                </div>
+
+            </div>
+        </section>
+
+        <div class="signUp-form">
+            <form class="form" method="post" action="/" margin: 50px 0;">
+                <div class="form-container">
+                    <p>Basic Details</p>
+                    <div class="flex1">
+                        <div class="flex1-left">
+                            <input id="name" type="text" name="name" placeholder="Owner Name" required>
+                            <input id="name" type="text" name="cname" placeholder="company Name" required>
+                            <input id="email" type="email" name="email" placeholder="Company Email" required>
+                            <select name="state" id="stateSelect" onchange="populateCities()">
+                                <option value="">Select State</option>
+                                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                <option value="Assam">Assam</option>
+                                <option value="Bihar">Bihar</option>
+                                <option value="Gujarat">Gujarat</option>
+                                <option value="Haryana">Haryana</option>
+                                <option value="Karnataka">Karnataka</option>
+                                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                <option value="Maharashtra">Maharashtra</option>
+                                <option value="Rajasthan">Rajasthan</option>
+                                <option value="Tamil Nadu">Tamil Nadu</option>
+                              </select>
+                        </div>
+                        <div class="flex1-right">
+                            <select id="citySelect" name="city">
+                                <option value="">Select City</option>
+                              </select>
+                              
+                            <input id="phone" type="text" name="mobile" placeholder="phone" required>
+                            <input id="phone" type="text" name="password" placeholder="password" required>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <label for="experience">Business experience</label><br>
+                    <input id="exp1" type="radio" name="experience" value="6-12 months">
+                    <label class="gender-label" for="male">6-12 months</label>
+                    <input id="exp2" type="radio" name="experience" value="1-5 years">
+                    <label class="gender-label" for="female">1-5 years</label>
+                    <input id="exp3" type="radio" name="experience" value="5+ years">
+                    <label class="gender-label" for="other">5+ years</label>
+                    <br>
+                    <br>
+                    <label for="interest">Operating Field</label>
+                    <div class="flex2">
+                        <div class="flex2-left dropdown-container">
+
+                            <select name="operating_field" id="operating field" class="dropdown">
+                                <option value="" selected="selected" disabled>Please Select</option>
+                                <option value="inbound">Inbound Tour Operator</option>
+                                <option value="outbound">Outbound Tour Operator</option>
+                                <Option value="domestic">Domestic</Option>
+                                <Option value="MICE">MICE</Option>
+                                <Option value="intDMC">International DMC</Option>
+                                <Option value="domDMC">Domestic DMC</Option>
+                                <Option value="intAirTicketing">Domestic AIR Ticketing</Option>`
+                                <Option value="domAirTicketing">International AIR Ticketing</Option>
+
+                            </select>
+                        </div>
+
+                        <div class="flex2-right">
+                            <input id="web" type="text" name="web" placeholder="Company Website" required>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+
+                    <div class="flex3">
+                        <div class="flex3-left dropdown-container" id="additional">
+                            <label for="sales">Annual Sales Volume (USD)</label>
+                            <select name="sales" id="sales" class="dropdown">
+                                <option value="" selected="selected" disabled>Please Select</option>
+                                <option value="less than $25,000">Less than $25,000</option>
+                                <option value="$25,000-$100,000">$25,000-$100,000</option>
+                                <Option value="$100,000-$750,000">$100,000-$750,000</Option>
+                                <Option value="$750,000-$2,000,000">$750,000-$2,000,000</Option>
+                                <Option value="$2,000,000-$10,000,000">$2,000,000-$10,000,000</Option>
+                                <Option value="$10,000,000-$50,000,000">$10,000,000-$50,000,000</Option>
+                                <Option value="More than $50,000,000">More than $50,000,000</Option>`
+                                <Option value="I don't currently accept credit card payments but want to">I don't currently accept credit card payments but want to</Option>
+                            </select>
+
+                        </div>
+
+                        <div class="flex3-right dropdown-container">
+                            <label for="feedback">How did you first hear about Tour Passion?</label>
+                            <select name="hearabout" id="feedback" class="dropdown">
+                                <option value="" selected="selected" disabled>Please Select</option>
+                                <option value="Contacted by Tour Passion representative">Contacted by Tour Passion
+                                    representative</option>
+                                <option value="Found through Google search">Found through Google search</option>
+                                <Option value="Met at conference">Met at conference</Option>
+                                <Option value="Met through shared association membership">Met through shared association
+                                    membership</Option>
+                                <Option value="Read a news artical or travel/tech publication">Read a news artical or
+                                    travel/tech publication</Option>
+                                <Option value="Reffered by Tour Passion customer">Reffered by Tour Passion customer
+                                </Option>
+                                <Option value="Referred by travel industry peer or professional">Referred by travel
+                                    industry peer or professional</Option>`
+                                <Option value="Other">Other</Option>
+
+                            </select>
+
+                        </div>
+                    </div>
+                </div>
+                <input id="submit-button" type="submit" name="Procced" value="Procced">
+            </form>
+
+            <div class="existing-login">
+                <p>Or existing user ?</p>
+                <button id="logIn-Button"><a href="/login"> Login</a></button>
+            </div>
+        </div>
+        <script src="js/index.js"></script>
+    </body>
+
+    </html>
+</body>
+
+</html>
